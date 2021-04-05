@@ -35,7 +35,6 @@ export class PartsTechAPIService {
   getAPI() {
     const headers = new HttpHeaders();
     this.http.post(this.url, {headers}).subscribe();
-
   }
 
   // Authorization: Bearer <accessToken>
