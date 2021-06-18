@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {PartsTechAPIService} from '../parts-tech-api.service';
+import {PartsTechAPIService} from './Services/parts-tech-api.service';
 
 @Component({
   selector: 'app-part-list',

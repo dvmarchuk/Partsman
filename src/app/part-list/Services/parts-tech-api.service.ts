@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaderResponse, HttpInterceptor, HttpHeaders, HttpParams} from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
-import * as data from './auth.json';
+import * as data from '../../auth.json';
 //import {Headers} from 'angular2/http';
 
 
@@ -40,8 +40,6 @@ export class PartsTechAPIService {
     }};
 
     this.http.post(this.url, JSON.stringify(payload), {headers}).subscribe();
-
-
 
   }
 }

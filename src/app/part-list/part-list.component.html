@@ -4,6 +4,27 @@
   <div class="btn-group" role="group">
     <h1>Choose your item to order</h1>
     <button type="button" class="btn btn-success" pad (click)="callApi()">Call API Test</button>
-    <button type="button" class="btn btn-success">Oil filter</button>
-  </div>
+<!--    all additional buttons for various products are added here-->
+
+
+      <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        Truck Maintenance Parts
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+        <li><a class="dropdown-item" href="#">Transmission Oil Filter</a></li>
+        <li><a class="dropdown-item" href="#">Motor Oil</a></li>
+      </ul>
+
+
+    <button id="btnGroupDrop2" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      Trailer Maintenance Parts
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop2">
+      <li><a class="dropdown-item" href="#">Axle grease</a></li>
+      <li><a class="dropdown-item" href="#">lug nuts</a></li>
+    </ul>
+    </div>
 </div>
+
+
+<!--you can use a default bootstrap select menu to implement a search-->
