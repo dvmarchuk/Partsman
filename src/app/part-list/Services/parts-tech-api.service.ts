@@ -3,7 +3,7 @@ import {HttpClient, HttpHeaderResponse, HttpInterceptor, HttpHeaders, HttpParams
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import * as data from '../../auth.json';
-//import {Headers} from 'angular2/http';
+// import {Headers} from 'angular2/http';
 
 
 
@@ -12,13 +12,14 @@ import * as data from '../../auth.json';
 })
 export class PartsTechAPIService {
   private posts: Observable<any>;
+  private allVin: any;
 
 
   constructor(private http: HttpClient) { }
 
 
 
-  url = 'https://api.partstech.com/oauth/access';
+  url = 'https://api.partstech.com';
 
 
   // tslint:disable-next-line:typedef
@@ -30,16 +31,21 @@ export class PartsTechAPIService {
       accessType: 'user',
       credentials: {
       user: {
-        id: 'dmarchuk',
-          key: '1be7bc0967eb478b8fa3ea350cdf0b44'
+        id: 'demo_vaautosales',
+          key: '1c82778be5a549229e5189ced4cc65d0'
       },
       partner: {
-        id: 'dmarchuk',
-          key: 'myrbar-nocqYc-0hejce'
-      }
-    }};
+        id: 'vaautosales_beta',
+          key: '0389ba8a09314b9d964498bfba63a016'
+      }}};
 
-    this.http.post(this.url, JSON.stringify(payload), {headers}).subscribe();
+    this.http.post(this.url + '/oauth/access', JSON.stringify(payload), {headers}).subscribe();
+    console.log(headers);
+  }
+
+  // tslint:disable-next-line:typedef
+    getApi2(){
+      console.log('getApi2');
 
   }
 }

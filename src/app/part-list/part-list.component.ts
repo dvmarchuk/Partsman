@@ -20,7 +20,10 @@ export class PartListComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   callApi() {
-    console.log(this.myAPI.getAPI());
+    this.myAPI.getAPI();
   }
 
+  callApi2() {
+    console.log(this.myAPI.getApi2());
+  }
 }

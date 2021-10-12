@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "partsman-5b700": {
+      "hosting": {
+        "Partsman": [
+          "partsman-5b700"
+        ]
+      }
+    }
+  }
+}
